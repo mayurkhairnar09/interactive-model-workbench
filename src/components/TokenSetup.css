@@ -1,0 +1,135 @@
+.token-setup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 20px;
+}
+
+.token-setup-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.token-setup-card h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin: 0 0 32px 0;
+  font-size: 16px;
+}
+
+.instructions {
+  background: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border-left: 4px solid #007acc;
+}
+
+.instructions h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #007acc;
+}
+
+.instructions ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #d4d4d4;
+}
+
+.instructions code {
+  background: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Consolas', monospace;
+  color: #4caf50;
+}
+
+.instructions a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.instructions a:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #d4d4d4;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Consolas', monospace;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.1);
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background: #007acc;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-button:hover {
+  background: #005a9e;
+}
+
+.footer-note {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-note small {
+  color: #666;
+  font-size: 12px;
+}

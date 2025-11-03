@@ -1,0 +1,160 @@
+.code-cell {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.cell-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #252525;
+  border-bottom: 1px solid #333;
+}
+
+.execution-count {
+  font-family: monospace;
+  font-size: 12px;
+  color: #007acc;
+  min-width: 40px;
+}
+
+.cell-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.run-button,
+.delete-button {
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.run-button {
+  color: #4caf50;
+}
+
+.run-button:hover:not(:disabled) {
+  background: #4caf5020;
+  border-color: #4caf50;
+}
+
+.run-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  color: #f44336;
+}
+
+.delete-button:hover {
+  background: #f4433620;
+  border-color: #f44336;
+}
+
+.cell-content {
+  position: relative;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border: none;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+}
+
+.code-editor::placeholder {
+  color: #555;
+}
+
+.cell-output {
+  border-top: 1px solid #333;
+  background: #1a1a1a;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.output-item {
+  padding: 12px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.output-item:last-child {
+  border-bottom: none;
+}
+
+.output-item pre {
+  margin: 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  color: #d4d4d4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error-output {
+  color: #f44336 !important;
+  background: #3a1a1a;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.cell-executing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #2d2d2d;
+  border-top: 1px solid #333;
+  color: #888;
+  font-size: 13px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #444;
+  border-top-color: #007acc;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar styling */
+.cell-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cell-output::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.cell-output::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.cell-output::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
