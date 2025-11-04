@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configuration
-const JUPYTER_BASE_URL = 'http://localhost:8000';
+const JUPYTER_BASE_URL = ''; // Use relative URLs for Vite proxy
 const JUPYTER_USERNAME = 'admin'; // Default admin username
 let JUPYTER_TOKEN = ''; // Will be set by the user
 
@@ -21,7 +21,7 @@ const jupyterApi = axios.create({
 // Add token to all requests
 jupyterApi.interceptors.request.use((config) => {
   if (JUPYTER_TOKEN) {
-    config.params = { ...config.params, token: JUPYTER_TOKEN };
+    config.headers['Authorization'] = `token ${JUPYTER_TOKEN}`;
   }
   return config;
 });
@@ -155,5 +155,8 @@ export const deleteKernel = async (kernelId: string) => {
  * Get WebSocket URL for kernel connection
  */
 export const getKernelWebSocketUrl = (kernelId: string): string => {
-  return `ws://localhost:8000/user/${JUPYTER_USERNAME}/api/kernels/${kernelId}/channels?token=${JUPYTER_TOKEN}`;
+  // Use ws:// for localhost, dynamically construct URL
+  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const host = window.location.host;
+  return `${protocol}//${host}/user/${JUPYTER_USERNAME}/api/kernels/${kernelId}/channels?token=${JUPYTER_TOKEN}`;
 };

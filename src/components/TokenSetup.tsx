@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { setJupyterToken } from '../services/jupyterApi';
 import './TokenSetup.css';
 
@@ -26,7 +26,7 @@ export const TokenSetup: React.FC<TokenSetupProps> = ({ onTokenSet }) => {
   return (
     <div className="token-setup">
       <div className="token-setup-card">
-        <h1>🚀 Interactive Model Analysis Workbench</h1>
+        <h1> Interactive Model Analysis Workbench</h1>
         <p className="subtitle">Connect to JupyterHub</p>
 
         <div className="instructions">
